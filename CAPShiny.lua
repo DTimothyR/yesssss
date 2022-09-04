@@ -7,7 +7,7 @@ local Chat = game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.ChatCha
 
 
 Chat.ChildAdded:Connect(function(instance)
-    if string.find(instance.TextLabel.Text,_G.Username) then
+    if string.find(instance.TextLabel.Text,"Timothy") then
         local OSTime = os.time()
         local Webhook = _G.Webhook
         local Time = os.date('!*t', OSTime)
