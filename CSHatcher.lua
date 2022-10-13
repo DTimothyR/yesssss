@@ -70,7 +70,7 @@ local playerNames = {_G.playerNames}
 
 
 -- Chat Connection
-local Headers = Headers {["content-type"] = "application/json"}
+local Headers = {["content-type"] = "application/json"}
 local Chat = game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.ChatChannelParentFrame["Frame_MessageLogDisplay"].Scroller
 
 -- The Hatcher
