@@ -70,7 +70,6 @@ local playerNames = {_G.playerNames}
 
 
 -- Chat Connection
-local Headers = {["content-type"] = "application/json"}
 local Chat = game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.ChatChannelParentFrame["Frame_MessageLogDisplay"].Scroller
 
 -- The Hatcher
@@ -112,7 +111,7 @@ Chat.ChildAdded:Connect(function(instance)
                     }}
                 }
                 local HttpRequest = syn and syn.request or http_request
-                HttpRequest({Url=Webhook, Body=HttpService:JSONEncode(Data), Method="POST", Headers=Headers})
+                HttpRequest({Url=Webhook, Body=HttpService:JSONEncode(Data), Method="POST", Headers={["content-type"] = "application/json"}})
             end
         
         end       
